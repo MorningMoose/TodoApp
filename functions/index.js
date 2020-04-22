@@ -7,3 +7,10 @@ const {
 
 app.get('/todos', getAllTodos);
 exports.api = functions.https.onRequest(app);
+
+
+const {
+    postOneTodo
+} = require('./APIs/todos')
+
+app.post('/todo', postOneTodo);
